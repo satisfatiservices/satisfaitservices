@@ -113,7 +113,7 @@ function CTAPremium({ data }: { data?: CtaSectionData | null }) {
                         <LinkComponent key={index} href={href}>
                           <Button
                             size="lg"
-                            variant={button.type === "primary" ? "default" : "outline"}
+                            variant={button.type === "primary" ? "primary" : "outline"}
                             className={button.type === "primary"
                               ? "w-full sm:w-auto bg-primary-500 hover:bg-primary-600 shadow-lg shadow-primary-500/30 text-sm md:text-base"
                               : "w-full sm:w-auto border-neutral-600 text-white hover:bg-neutral-700 text-sm md:text-base"
@@ -215,7 +215,7 @@ function CTAPremium({ data }: { data?: CtaSectionData | null }) {
                         <LinkComponent key={index} href={href} className="flex-1">
                           <Button
                             size="lg"
-                            variant={button.type === "primary" ? "default" : "outline"}
+                            variant={button.type === "primary" ? "primary" : "outline"}
                             className={button.type === "primary"
                               ? "w-full bg-primary-500 hover:bg-primary-600 shadow-lg shadow-primary-500/30 text-sm"
                               : "w-full border-neutral-600 text-white hover:bg-neutral-700 text-sm"
