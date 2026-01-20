@@ -93,8 +93,6 @@ export default function RootLayout({
   return (
     <html lang="fr" className={inter.variable}>
       <head>
-        <link rel="icon" href="/images/logo.png" type="image/png" sizes="32x32" />
-        <link rel="icon" href="/images/logo.png" type="image/png" sizes="16x16" />
         <link rel="apple-touch-icon" href="/images/logo.png" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#3B82F6" />
