@@ -59,15 +59,25 @@ function ContactForm() {
     setSubmitStatus(null);
 
     try {
-      // Simulation d'envoi du formulaire
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
 
-      // En production, ici vous ajouteriez l'appel API
-      console.log("Form data:", data);
+      const result = await response.json();
+
+      if (!response.ok) {
+        console.error("API Error:", result);
+        throw new Error(result.error || "Erreur lors de l'envoi");
+      }
 
       setSubmitStatus("success");
       reset();
-    } catch {
+    } catch (error) {
+      console.error("Form submission error:", error);
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
